@@ -20,7 +20,11 @@
     "gulp-istanbul": "^1.1.3",
     "gulp-jasmine": "^2.3.0",
     "jasmine-reporters": "^2.1.1",
-    "mocha": "^5.2.0"
+    "js-yaml": "^3.12.0",
+    "mocha": "^5.2.0",
+    "node-csv": "^0.1.2",
+    "properties": "^1.2.1",
+    "xlsx": "^0.13.1"
   },
   "engines": {
     "node": ">=6.9.1",
