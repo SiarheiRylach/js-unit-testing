@@ -9,6 +9,13 @@ const addMethodVerificationSet = [
     [0, 0, 0, 0]
 ];
 
+const multiplyMethodVerificationSet = [
+    [2, 3, 4, 1, 24],
+    [-2, 5, 3, 2, -60],
+    [-1, -3, -4, -2, 24],
+    [3, -5, 0, 3,  0]
+];
+
 describe('Calculator', () => {
     let instance;
 
@@ -27,14 +34,15 @@ describe('Calculator', () => {
     });
 
     addMethodVerificationSet.forEach(numSet => {
-        it('instance of class should have add() that summarize all parameters, which were sent to method and return result', () => {
+        it('the method add() that summarize all parameters, which were sent to method and return result', () => {
             expect(instance.add(numSet[0], numSet[1], numSet[2])).toBe(numSet[3]);
         });
     });
 
-
-    it('the method multiply() should multiply all parameters, which were sent to method and return result', () => {
-        expect(instance.multiply(5, 10, 3)).toBe(150);
+    multiplyMethodVerificationSet.forEach(numSet => {
+        it('the method multiply() should multiply all parameters, which were sent to method and return result', () => {
+            expect(instance.multiply(numSet[0], numSet[1], numSet[2], numSet[3])).toBe(numSet[4]);
+        });
     });
 
 });
